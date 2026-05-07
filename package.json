@@ -1,0 +1,16 @@
+{
+  "name": "pr-slop-checker",
+  "version": "1.0.0",
+  "description": "A small GitHub App that comments on PRs with a deterministic quality report to catch low-effort AI slop.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "keywords": ["github-app", "webhook", "pull-request", "octokit"],
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "octokit": "^4.1.0"
+  }
+}
