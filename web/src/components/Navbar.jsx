@@ -13,7 +13,7 @@ const Navbar = () => (
       </div>
       <div className="navbar-actions">
         <a href="https://github.com/rakshityadav1868/Glim-oko" className="mono navbar-repo-link">View Repo</a>
-        <a href="https://github.com/apps/glim-oko" className="btn-black">Deploy System</a>
+        <a href="https://github.com/apps/glimokoo" className="btn-black">Deploy System</a>
       </div>
     </div>
   </nav>
