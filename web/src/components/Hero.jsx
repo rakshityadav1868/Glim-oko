@@ -16,7 +16,7 @@ const Hero = () => (
           The first autonomous Pull Request governance layer. Analyze technical intent, enforce heuristics, and label quality with zero human latency.
         </p>
         <div className="hero-buttons">
-          <a href="https://github.com/apps/glim-oko" className="btn-black">
+          <a href="https://github.com/apps/glimokoo" className="btn-black">
             Install GlimOko <ArrowRight size={20} />
           </a>
           <a href="https://github.com/rakshityadav1868/Glim-oko" className="btn-ghost">
