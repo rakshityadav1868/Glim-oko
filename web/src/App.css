@@ -1,0 +1,485 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.hero .hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.hero-visual {
+  border: 2px solid black;
+  padding: 10px;
+  background: white;
+  box-shadow: 40px 40px 0px var(--border);
+}
+
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  z-index: 2;
+  top: 0;
+}
+
+.logic-section {
+  padding: 160px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: white;
+}
+
+.logic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.heuristics-section {
+  padding: 160px 0;
+  background: var(--bg);
+}
+
+.heuristics-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 120px;
+  align-items: center;
+}
+
+.metrics-bar {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: white;
+}
+
+.metrics-container {
+  display: flex;
+}
+
+.final-call {
+  padding: 160px 0;
+  text-align: center;
+}
+
+/* Hero Section */
+.hero-title {
+  color: var(--accent);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.hero h1 {
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 0.85;
+  margin-bottom: 40px;
+  letter-spacing: -0.06em;
+}
+
+.hero p {
+  font-size: 20px;
+  color: var(--muted);
+  margin-bottom: 56px;
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.hero-buttons a {
+  padding: 20px 40px;
+  font-size: 16px;
+}
+
+.hero-visual img {
+  width: 100%;
+  display: block;
+}
+
+/* Logic Cards */
+.logic-grid .card {
+  transition: transform 0.2s ease-out, opacity 0.3s ease-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-icon-box {
+  width: 64px;
+  height: 64px;
+  background: var(--accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 32px;
+}
+
+.card-icon {
+  color: var(--accent);
+}
+
+.card h3 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Heuristics Section */
+.heuristics-section h2 {
+  font-size: 64px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  margin-bottom: 32px;
+}
+
+.heuristics-section>.container>div:first-child>p {
+  color: var(--muted);
+  font-size: 20px;
+  margin-bottom: 64px;
+}
+
+.heuristics-labels {
+  display: grid;
+  gap: 24px;
+}
+
+.heuristics-label {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.label-badge {
+  color: white;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: 4px;
+}
+
+.label-badge.high-quality {
+  background: #2ea44f;
+}
+
+.label-badge.needs-review {
+  background: #d29922;
+}
+
+.label-badge.low-quality {
+  background: #d73a4a;
+}
+
+.label-description {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Console Box */
+.console-box {
+  border: 1px solid black;
+  padding: 40px;
+  background: white;
+  position: relative;
+  z-index: 1;
+}
+
+.console-title {
+  margin-bottom: 32px;
+}
+
+.console-output {
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.console-output div {
+  margin-bottom: 8px;
+}
+
+.console-success {
+  color: #2ea44f;
+}
+
+.console-accent {
+  color: var(--accent);
+}
+
+.heuristics-visual {
+  position: relative;
+}
+
+.console-backdrop {
+  position: absolute;
+  inset: 20px;
+  background: var(--accent);
+  z-index: 0;
+}
+
+/* Final Call Section */
+.final-call h2 {
+  font-size: 80px;
+  font-weight: 900;
+  margin-bottom: 48px;
+  letter-spacing: -0.05em;
+}
+
+.final-call-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.final-call-buttons a {
+  padding: 24px 80px;
+  font-size: 20px;
+  border-radius: 0;
+}
+
+.app-root {
+  position: relative;
+}
+
+/* ── Navbar ── */
+.navbar {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+}
+
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 40px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.navbar-repo-link {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+/* ── Footer ── */
+.footer {
+  padding: 80px 0;
+  border-top: 1px solid var(--border);
+  background: white;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.footer-links {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+/* ── MetricCard ── */
+.metric-card {
+  padding: 32px;
+  border-right: 1px solid var(--border);
+  flex: 1;
+}
+
+.metric-card-header {
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.metric-card-value {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+/* ── Logic Section ── */
+.logic-subtitle {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.scroll-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  background-color: var(--accent);
+  /* Using the project's accent color */
+  width: 0%;
+  /* Use a smooth transition for the width property to make it look fluid */
+  transition: width 0.1s ease-out;
+  /* Optional: A subtle glow matching the accent color for a modern look */
+  box-shadow: 0 0 8px var(--accent);
+}
+
+/* ── Responsive Design ── */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 72px;
+  }
+  
+  .logic-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heuristics-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  
+  .metrics-container {
+    flex-wrap: wrap;
+  }
+  
+  .metric-card {
+    min-width: 250px;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-title {
+    justify-content: center;
+  }
+
+  .hero p {
+    margin: 0 auto 40px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .logic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logic-section, .heuristics-section, .final-call {
+    padding: 80px 0;
+  }
+
+  .navbar-inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navbar-links {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .navbar-actions {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .navbar {
+    position: static; /* Let it scroll naturally on mobile so it doesn't block content */
+    padding: 16px 0;
+  }
+  
+  .hero {
+    padding-top: 40px;
+    min-height: auto;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .final-call h2 {
+    font-size: 48px;
+  }
+  
+  .final-call-buttons {
+    flex-direction: column;
+  }
+}
